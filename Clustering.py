@@ -6,6 +6,9 @@ Created on Sat Aug 18 14:53:51 2018
 @author: mguina
 """
 
+# The purpose of this example is to show when the Gaussian Mixture Models
+# performs better than the K-Means clustering algorithm
+
 # Create first in 1D a simple 3 set of clusters
 
 import numpy as np

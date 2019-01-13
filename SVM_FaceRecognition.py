@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from sklearn.svm import SVC
 from sklearn.grid_search import GridSearchCV
 from sklearn.cross_validation import train_test_split
-from sklearn.decomposition import RandomizedPCA
+from sklearn.decomposition import PCA
 from sklearn.pipeline import make_pipeline
 
 
@@ -29,7 +29,8 @@ for i, axi in enumerate(ax.flat):
 # reduction technique => PCA 
 
 
-pca = RandomizedPCA(n_components=150, whiten=True, random_state=42)
+pca = PCA(svd_solver='randomized', n_components=150, whiten=True,
+          random_state=42)
 svc = SVC(kernel='rbf', class_weight='balanced')
 model = make_pipeline(pca, svc)
 

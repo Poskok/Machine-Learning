@@ -46,7 +46,7 @@ the maximum likelihood
 """
 
 n_component = np.arange(50,210 ,10) #range of number of clusters
-models = [GaussianMixture(n, covariance_type = 'full', random_state = 0) for n in n_components] # we define a model per number of clusters
+models = [GaussianMixture(n, covariance_type = 'full', random_state = 0) for n in n_component] # we define a model per number of clusters
 aics = [model.fit(data).aic(data) for model in models]
 
 
